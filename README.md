@@ -6,6 +6,28 @@
 
 - This system allows users to input their phone number, select a salutation (greeting), enter the recipient's name, compose a custom message, and send it via SMS. The app ensures seamless communication between the sender and the recipient.
 
+
+## **Installation Guide / Running the Application**
+Follow the steps below to set up and run the IT120-SMS Application on your local machine.
+
+git clone https://github.com/markjamisola/Send-Ease.git
+
+After cloning 
+**Create virtual environment**
+- **python -m venv .venv**
+
+**Install dependencies**
+- **pip install -r requirements.txt**
+
+**Create .env file containing your twilio credentials**
+- TWILIO_ACCOUNT_SID=your_twilio_sid
+- TWILIO_AUTH_TOKEN=your_twilio_token
+- TWILIO_PHONE_NUMBER=your_twilio_number
+
+**Run the program**
+- **python manage.py runserver**
+
+
 ## **Features**
 
 - **SMS Sending:** Send custom messages via SMS to any valid phone number using Twilio. In our case, our app only has one valid number that we can send SMS to.
@@ -27,16 +49,6 @@
 - **Twilio API:** For sending SMS messages
 - **Frontend:** HTML, CSS (Bootstrap for UI styling)
 
-
-## **Installation Guide / Running the Application**
-Follow the steps below to set up and run the IT120-SMS Application on your local machine.
-
-git clone https://github.com/markjamisola/IT-120-SMS
-
-After cloning you can try to run the program by typing
-- **python manage.py runserver**
-  on your vscode terminal.
-
 ## **Configuration**
 
 **Twilio Setup**
@@ -46,14 +58,6 @@ Go to Twilio’s website and sign up for an account if you don't already have on
 After creating an account, find your **Account SID** and **Auth Token** from the Twilio console.
 You will also need a **Twilio phone number** to send messages. You can get one from the Twilio console.
 
-After getting your **Account SID**, **Auth Token**, and **Twilio phone number**, you can change the existing Twilio Credentials located on 
-- **dashboard/views.py**
-
-**# Twilio credentials**
-
-- account_sid = 'your twilio sid'
-- auth_token = 'your twilio token'
-- from_='your twilio number',
 
 
 ## **Send ease Pages**
